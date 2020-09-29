@@ -32,7 +32,7 @@
 }
 
 body,html{
-	padding: 2vw 1vw 0vw 1vw;
+	padding: 0.5vw 1vw 0vw 1vw;
 	margin: 0;
 	font-family: "Fira Code", monospace;
 	font-size: 0.85vw;
@@ -62,6 +62,9 @@ footer{
 
 #subtitle{
 	text-align: center;
+}
+#subtitle a{
+	color: white;
 }
 
 
