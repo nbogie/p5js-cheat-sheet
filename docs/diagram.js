@@ -138,6 +138,55 @@ var ellipseSketch = function(p){
 	};
 };
 
+var circleSketch = function (p) {
+	var canvas;
+
+	var fira;
+	p.preload = function () {
+		fira = p.loadFont(fontFile);
+	}
+
+	p.setup = function () {
+		canvas = p.createCanvas(canvasSize, canvasSize);
+		canvas.parent("circle-canvas");
+		p.strokeWeight(0.25);
+		p.push();
+		p.translate(canvasSize / 15, canvasSize / 15);
+
+		var gridSize = canvasSize - 2 * canvasSize / 15;
+		for (var x = 0; x <= 10; x++) {
+			p.line(gridSize / 10 * x, 0, gridSize / 10 * x, gridSize);
+		}
+		for (var y = 0; y <= 10; y++) {
+			p.line(0, gridSize / 10 * y, gridSize, gridSize / 10 * y);
+		}
+		p.pop();
+
+		var x = p.width / 2;
+		var y = p.width / 2;
+		p.stroke("#000000");
+		p.strokeWeight(2);
+		p.fill(p5Pink);
+		p.circle(x, y, gridSize / 10 * 6.5);
+
+		p.noStroke();
+		p.fill("#000000");
+		p.circle(x, y, gridSize / 20);
+
+		p.textSize(txtSz);
+		p.textFont(fira);
+		p.noStroke();
+		p.textAlign(p.CENTER, p.BOTTOM);
+		p.text("(x,y)", x, y - 10);
+
+		p.push();
+		p.translate(p.width / 2, p.height / 2 + (gridSize / 10 * 6.5) / 2 + 7);
+		p.textAlign(p.CENTER, p.TOP);
+		p.text(terms.diameter, 0, 0);
+		p.pop();
+	};
+};
+
 var rectSketch = function(p){
 	var canvas;
 
@@ -372,6 +421,7 @@ var ifelseSketch = function(p){
 new p5(gridSketch);
 new p5(lineSketch);
 new p5(ellipseSketch);
+new p5(circleSketch);
 new p5(rectSketch);
 new p5(arcSketch);
 new p5(vertexSketch);
