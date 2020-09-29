@@ -420,9 +420,9 @@ var ifelseSketch = function(p){
 
 new p5(gridSketch);
 new p5(lineSketch);
-new p5(ellipseSketch);
+// new p5(ellipseSketch);
 new p5(circleSketch);
 new p5(rectSketch);
 new p5(arcSketch);
 new p5(vertexSketch);
-new p5(ifelseSketch);
+// new p5(ifelseSketch);
