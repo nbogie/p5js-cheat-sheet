@@ -50,6 +50,7 @@ width / height
 
 mouseX / mouseY
 //current horizontal / vertical mouse position
+
 pmouseX / pmouseY
 //previous horizontal / vertical mouse position
 </code></pre>
@@ -89,7 +90,7 @@ color(0, 0, 255); //p5.Color object
 random(low,high); //ranged random number
 
 random(["red", "yellow", "blue"]); 
-//pick one from an array
+//pick one thing from an array of things
 
 map(value, in1, in2, out1, out2);
 //map a value from input range to output range
@@ -137,8 +138,8 @@ text("string", x, y, boxwidth, boxheight);
 					<div id="line-canvas"></div>
 				</li>
 				<li class="canvas-container">
-					<h2>ellipse()</h2>
-					<div id="ellipse-canvas"></div>
+					<h2>circle()</h2>
+					<div id="circle-canvas"></div>
 				</li>
 				<li class="canvas-container">
 					<h2>rect()</h2>
@@ -229,6 +230,7 @@ textSize(pixels);
 		var terms = {
 			"width": "width",
 			"height": "height",
+			"diameter": "diameter",
 			"stop": "stop",
 			"start": "start",
 			"true": "true",
